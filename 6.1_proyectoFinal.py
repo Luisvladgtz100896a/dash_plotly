@@ -145,5 +145,5 @@ def actualizar_graph_cat(fecha_min, fecha_max, seleccion,hoverData):
 
 
 if __name__ == '__main__':
-    app.run_server(port=7200, debug=True)
+    app.run_server(host='0.0.0.0', port=7200, debug=True)
 

@@ -9,9 +9,9 @@ import pandas as pd
 app = dash.Dash()
 
 # FASE 1: CARGA DE DATOS (dataframe df_ventas --> Pestaña "Detalle" / dataframe df_ventas_acum --> Pestaña "Acumulado")
-df_ventas = pd.read_excel(r'C:\Users\ASUS\Documents\1 cursos\udemy\python\Dash-plotly\recursos\Datasets y Scripts Plotly Dash\Datasets\PROYECTO FINAL\Ventas.xlsx')
+df_ventas = pd.read_excel(r'Ventas.xlsx')
 
-df_ventas_acum = pd.read_excel(r'C:\Users\ASUS\Documents\1 cursos\udemy\python\Dash-plotly\recursos\Datasets y Scripts Plotly Dash\Datasets\PROYECTO FINAL\Ventas.xlsx',sheet_name="Acumulado")
+df_ventas_acum = pd.read_excel(r'Ventas.xlsx',sheet_name="Acumulado")
 
 # FASE 3: CREACIÓN GRÁFICO GEOGRÁFICO
 mapbox_access_token = "pk.eyJ1IjoiaXZhbmxvc2FyIiwiYSI6ImNrZTJpdWN0NDA5cXUyem1oOGx3NGh1bGsifQ.wuhB2vmk4QGrciFWYygqaA"
@@ -145,5 +145,6 @@ def actualizar_graph_cat(fecha_min, fecha_max, seleccion,hoverData):
 
 
 if __name__ == '__main__':
-    app.run_server(host='0.0.0.0', port=7200, debug=True)
+    app.run_server(host='0.0.0.0', port=8080, debug=True)
+    ## adios amigo
 
